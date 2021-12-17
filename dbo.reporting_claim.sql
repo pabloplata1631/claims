@@ -54,7 +54,9 @@ END as claim_status,
     p.policy_amount,
     p.start_date as policy_start_date,
     p.end_date as policy_end_date,
-    p.policy_type
+    p.policy_type,
+    e.first_name as agents_first_name,
+    e.last_name as agents_last_name
 into dbo.reporting_claim
 from dbo.claims c
     left join customer_number_of_claims cnc on c.customer_id = cnc.customer_id
@@ -62,7 +64,8 @@ from dbo.claims c
     from customers) cust ON c.customer_id = cust.customer_id
     left join (select distinct *
     from policy) p ON c.customer_id = p.customer_id
-
+    left join (select distinct *
+    from employees) e on c.employee_id = e.employee_id
 ;
 
 
