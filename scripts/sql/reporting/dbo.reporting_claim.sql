@@ -28,18 +28,18 @@ select
     c.claim_number,
     c.statu_code as status_code,
     case when c.statu_code = 'R1' 
-then 'Rejected'
-when c.statu_code = 'DR07' 
-then 'Received'
-when c.statu_code = 'F1' 
-then 'Paid Out'
-when c.statu_code = 'F2' 
-then 'Information Requested'
-when c.statu_code = 'A2' 
-then 'Pending'
-when c.statu_code = 'P1' 
-then 'Approved'
-END as claim_status,
+                    then 'Rejected'
+                    when c.statu_code = 'DR07' 
+                    then 'Received'
+                    when c.statu_code = 'F1' 
+                    then 'Paid Out'
+                    when c.statu_code = 'F2' 
+                    then 'Information Requested'
+                    when c.statu_code = 'A2' 
+                    then 'Pending'
+                    when c.statu_code = 'P1' 
+                    then 'Approved'
+                    END as claim_status,
     c.customer_id,
     c.incident_date as claim_date,
     c.incident_city as claim_city,

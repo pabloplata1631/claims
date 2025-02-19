@@ -1,0 +1,67 @@
+﻿Type,Subtype,Rank,Account,SubAccount,ValueType,Account_key
+Cash and Cash equivalents at the start of the year,Cash at bank,1,Cash at bank,Cash at bank,Opening_balance,10
+Cash and Cash equivalents at the start of the year,Cash at bank,1,Cash at bank,Cash in hand,Opening_balance,20
+Cash flows from Operating Activities,Profit before tax,2,Sales,Sales,All_FTP,210
+Cash flows from Operating Activities,Profit before tax,2,Sales,Sales Return,All_FTP,220
+Cash flows from Operating Activities,Profit before tax,2,Cost of Sales,Cost of Sales,All_FTP,230
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Salaries,All_FTP,240
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Bad Debt Expense,All_FTP,250
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Commissions,All_FTP,260
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Conferences,All_FTP,270
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Advertisements,All_FTP,280
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Travel,All_FTP,290
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Entertainment,All_FTP,300
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Office Supplies,All_FTP,310
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Professional Services,All_FTP,320
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Telephone,All_FTP,330
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Utilities,All_FTP,340
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Other Expenses,All_FTP,350
+Cash flows from Operating Activities,Profit before tax,2,Operating Expenses,Rent,All_FTP,360
+Cash flows from Operating Activities,Profit before tax,2,Depreciation & Amortization,Vehicles,All_FTP,370
+Cash flows from Operating Activities,Profit before tax,2,Depreciation & Amortization,Equipment,All_FTP,380
+Cash flows from Operating Activities,Profit before tax,2,Depreciation & Amortization,Furniture and Fixtures,All_FTP,390
+Cash flows from Operating Activities,Profit before tax,2,Depreciation & Amortization,Amortization of Intangible Assets,All_FTP,400
+Cash flows from Operating Activities,Profit before tax,2,Interest Income,Interest Income,All_FTP,410
+Cash flows from Operating Activities,Profit before tax,2,Gain/Loss on Sales of Asset,Gain/Loss on Sales of Asset,All_FTP,420
+Cash flows from Operating Activities,Profit before tax,2,Exchange Loss/Gain,Exchange Loss/Gain,All_FTP,430
+Cash flows from Operating Activities,Profit before tax,2,Dividend Income,Dividend Income,All_FTP,431
+Cash flows from Operating Activities,Profit before tax,2,Interest Expense,Interest Expense,All_FTP,440
+Cash flows from Operating Activities,Interest Expense,3,Interest Expense,Interest Expense,All_FTP_CS,440
+Cash flows from Operating Activities,Non-Operating,4,Interest Income,Interest Income,All_FTP_CS,410
+Cash flows from Operating Activities,Non-Operating,4,Gain/Loss on Sales of Asset,Gain/Loss on Sales of Asset,All_FTP_CS,420
+Cash flows from Operating Activities,Non-Operating,4,Dividend income,Dividend income,All_FTP_CS,431
+Cash flows from Operating Activities,Non-Cash items,5,Depreciation,Vehicles,All_FTP_CS,370
+Cash flows from Operating Activities,Non-Cash items,5,Depreciation,Equipment,All_FTP_CS,380
+Cash flows from Operating Activities,Non-Cash items,5,Depreciation,Furniture and Fixtures,All_FTP_CS,390
+Cash flows from Operating Activities,Non-Cash items,5,Amortization,Amortization,All_FTP_CS,400
+Cash flows from Operating Activities,Working Capital Changes,6,Receivables,Trade Receivables,All_FTP_CS,30
+Cash flows from Operating Activities,Working Capital Changes,6,Receivables,Other Receivables,All_FTP_CS,40
+Cash flows from Operating Activities,Working Capital Changes,6,Inventory,Inventory,All_FTP_CS,60
+Cash flows from Operating Activities,Working Capital Changes,6,Payables,Trade Payables,All_FTP,110
+Cash flows from Operating Activities,Working Capital Changes,6,Payables,Accrued Expenses,All_FTP,120
+Cash flows from Operating Activities,Interest Paid,7,Interest payable,Interest payable,All_FTP_Negative,121
+Cash flows from Operating Activities,Tax paid,8,Tax expense,Tax expense,All_FTP,450
+Cash flows from Operating Activities,Tax paid,8,Tax payable,Tax payable,All_FTP,122
+Cash flows from Investing Activities,Purchase of Non-Current Assets,9,"Property, Plant, & Equipment",Land & Buildings,All_FTP_Positive_CS,80
+Cash flows from Investing Activities,Purchase of Non-Current Assets,9,"Property, Plant, & Equipment",Office Furniture & Equipment,All_FTP_Positive_CS,90
+Cash flows from Investing Activities,Purchase of Non-Current Assets,9,Intangible Assets,Patents and trademarks,All_FTP_Positive_CS,100
+Cash flows from Investing Activities,Sale of Non-Current Assets,10,"Property, Plant, & Equipment",Land & Buildings,All_FTP_Negative_CS,80
+Cash flows from Investing Activities,Sale of Non-Current Assets,10,"Property, Plant, & Equipment",Office Furniture & Equipment,All_FTP_Negative_CS,90
+Cash flows from Investing Activities,Sale of Non-Current Assets,10,"Property, Plant, & Equipment",Depreciation,All_FTP,380
+Cash flows from Investing Activities,Sale of Non-Current Assets,10,"Property, Plant, & Equipment",Gain/Loss on Sales of Asset,All_FTP,420
+Cash flows from Investing Activities,Sale of Non-Current Assets,10,Intangible Assets,Patents and trademarks,All_FTP_Negative_CS,100
+Cash flows from Investing Activities,Sale of Non-Current Assets,10,Intangible Assets,Amortization,All_FTP,400
+Cash flows from Investing Activities,Investments,11,Investments,Investments,All_FTP_Positive_CS,75
+Cash flows from Investing Activities,Interest received,12,Interest income,Interest income,All_FTP,410
+Cash flows from Investing Activities,Interest received,12,Interest receivable,Interest receivable,All_FTP,41
+Cash flows from Investing Activities,Dividends received,13,Dividend income,Dividend income,All_FTP,431
+Cash flows from Investing Activities,Dividends received,13,Dividend receivable,Dividend receivable,All_FTP,42
+Cashflows from Financing Activities,Proceeds from the issuance of Share Capital,14,Share Capital,Share Capital,All_FTP,180
+Cashflows from Financing Activities,Proceeds from the issuance of Share Capital,14,Share Premium,Share Premium,All_FTP,190
+Cashflows from Financing Activities,Proceeds from long term borrowings,15,Long term loan,Long term loan,All_FTP_Positive,160
+Cashflows from Financing Activities,Proceeds from long term borrowings,15,Long term loan,Long term loan,All_FTP_Positive,170
+Cashflows from Financing Activities,Repayment of Long term loan,16,Long term loan,Long term loan,All_FTP_Negative,160
+Cashflows from Financing Activities,Repayment of Long term loan,16,Long term loan,Long term loan,All_FTP_Negative,170
+Cashflows from Financing Activities,Dividends paid,17,Dividends ,Dividends ,All_FTP_Negative,135
+Cash and Cash equivalents at the end of the year,Cash at bank,18,Cash at bank,Cash at bank,Closing_balance,10
+Cash and Cash equivalents at the end of the year,Cash at bank,18,Cash at bank,Cash in hand,Closing_balance,20

@@ -1,0 +1,14 @@
+﻿Type,Account,Balancetype,Account_key
+Balance at the beginning,Share Capital,Opening_balance,180
+Balance at the beginning,Share Premium,Opening_balance,190
+Balance at the beginning,Retained Earnings,Opening_balance,200
+Balance at the beginning,Retained Earnings,Opening_balance,201
+Changes in accounting policy,Retained Earnings,TBDL,200
+Total income for the period,Retained Earnings,FTP,200
+Dividends paid in the period,Retained Earnings,FTP_negative,201
+Issue of share capital,Share Capital,FTP_positive,180
+Issue of share capital,Share Premium,FTP_positive,190
+Balance at the end,Share Capital,Closing_balance,180
+Balance at the end,Share Premium,Closing_balance,190
+Balance at the end,Retained Earnings,Closing_balance,200
+Balance at the end,Retained Earnings,Closing_balance,201
