@@ -1,0 +1,13 @@
+# Credentials and local runtime output
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+nyc311/data/raw/*
+!nyc311/data/raw/README.md
+nyc311/data/samples/*
+!nyc311/data/samples/README.md
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
