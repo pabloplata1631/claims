@@ -5,6 +5,7 @@ import datetime as dt
 import hashlib
 import json
 import os
+import ssl
 from pathlib import Path
 import time
 import urllib.error
@@ -32,6 +33,10 @@ def cohort_filter(borough, start, end):
 
 
 def fetch(url, params=None, attempts=4, timeout=60):
+    context = None
+    if os.name == "nt":
+        import truststore
+        context = truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
     if params:
         url += "?" + urllib.parse.urlencode(params)
     headers = {"User-Agent": "nyc311-portfolio/0.1"}
@@ -41,7 +46,7 @@ def fetch(url, params=None, attempts=4, timeout=60):
     for attempt in range(attempts):
         try:
             with urllib.request.urlopen(
-                urllib.request.Request(url, headers=headers), timeout=timeout
+                urllib.request.Request(url, headers=headers), timeout=timeout, context=context
             ) as response:
                 return json.load(response)
         except urllib.error.HTTPError as exc:
@@ -113,7 +118,7 @@ def run(args):
         count = 0
         fields = set()
         digest = hashlib.sha256()
-        with (output / "records.jsonl").open("w", encoding="utf-8") as handle:
+        with (output / "records.jsonl").open("w", encoding="utf-8", newline="\n") as handle:
             for batch in pages(where, config["page_size"], args.max_records, get):
                 for row in batch:
                     line = json.dumps(row, sort_keys=True, ensure_ascii=False) + "\n"

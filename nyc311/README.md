@@ -17,10 +17,16 @@ Implemented and locally checked: API extractor, immutable per-run file layout,
 sample mode, raw-field preservation, source schema capture, reconciliation
 manifest, unit tests, and CI configuration.
 
-Designed, not implemented or deployed: SQL loading and transformation, history
+Also implemented: a DEV-only raw loader with explicit sample opt-in, manifest and
+checksum checks, a transaction for batch plus raw rows, and duplicate-run rejection.
+Windows extraction uses the OS certificate store through truststore.
+
+Designed, not implemented or deployed: SQL transformation, history
 tables, daily scheduling, Power BI report, workspace promotion, app, and agent.
-Database scripts must wait for confirmation of the target database and SQL Server
-version. Connecting a plugin does not connect a local SQL Server automatically.
+Confirmed user environment: SQL Server 2019, compatibility 150, Windows
+authentication, and NYC_Operations_Dev with audit.load_batch and raw.request_payload
+created through SSMS. Local Python connectivity succeeded. This development
+environment does not have direct access to that desktop database.
 
 ## Source and scope
 
@@ -48,7 +54,8 @@ version. Connecting a plugin does not connect a local SQL Server automatically.
 
 ## Run a small extract
 
-Python 3.10+; standard library only for the extractor. Run from the repository root:
+Python 3.10+. Install dependencies with `python -m pip install -r nyc311/requirements.txt`.
+Run from the repository root:
 
 ```bash
 python nyc311/etl/extract.py --start 2026-10-01 --end 2026-10-02 --max-records 100
