@@ -1,17 +1,14 @@
-# SQL implementation sequence (planned)
+# SQL build order
 
-Use an isolated NYC 311 database initially, or dedicated schemas in the existing
-database after confirming its name and existing objects. Do not alter the legacy
-claims tables. DEV/UAT/PROD should use separate databases where practical, with
-identical object names and environment-specific connection configuration.
+Run in SSMS on SQL Server 2019, compatibility 150:
 
-1. `001_schemas.sql`: `audit`, `raw`, `stg`, `core`, `analytics`.
-2. `010_ingestion.sql`: audit batch and append-only raw JSON payload tables.
-3. `020_staging.sql`: typed cleaning views plus a rejected-record table.
-4. `030_history.sql`: current requests, hash-based observed versions, daily snapshots.
-5. `040_analytics.sql`: request detail, demand, closures, aging and data quality views.
-6. `050_validation.sql`: uniqueness, date logic, reconciliation and idempotency checks.
+1. 000_dev_database.sql creates NYC_Operations_Dev if absent.
+2. 001_schemas.sql creates audit, raw, stg, core, analytics if absent.
+3. 010_ingestion.sql creates load audit and raw tables if absent.
+4. 020_staging.sql creates or updates the typed staging view.
 
-These filenames specify the intended order; SQL execution scripts are not
-implemented yet. The loader should use parameterized statements and transactions,
-advance successful-load state only on commit, and retain failed-batch evidence.
+The user executed initial equivalents in SSMS and verified 100 sample records.
+Existing database and tables are preserved by guards, not migrated. Rerun only
+the view script when its definition changes. All scripts explicitly target DEV.
+Core history and analytics implementation follow later. Legacy claims tables
+remain separate. UAT and PROD will be separate databases.
