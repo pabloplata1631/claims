@@ -1,5 +1,21 @@
 # Foundation validation
 
+## Core desktop validation confirmed November 12 2026
+
+The user executed scripts 030 and 031 successfully, then 032 reported batch 1
+Processed with 100 accepted, zero rejected, 100 new, zero changed and zero
+unchanged. Core held 100 current sample requests and 100 initial versions.
+Request 70592679 retained request validity and its NULL ineligible duration.
+Repeating batch 1 returned Already processed, with both counts unchanged at 100.
+
+The user executed 033_test_core_history.sql; the supplied result showed Passed
+with scenario_count 7. The script's seven controlled scenarios cover new,
+repeated, unchanged, changed, invalid, sample/full separation, and retention
+invariants. Test data is rolled back. These observations establish the tested
+scenarios, not concurrency, older-batch rejection or full production readiness.
+
+Analytics scripts 040 and 041 are the next milestone; desktop execution pending.
+
 ## Subsequent desktop validation confirmed November 12 2026
 
 The user executed the updated staging view and SQL validations in SSMS:
@@ -9,7 +25,7 @@ Request 70592679 retains valid-request eligibility, has is_valid_duration = 0,
 and NULL closure_duration_seconds. Original timestamps were preserved.
 The user executed 026_test_staging_rules.sql and reported Passed with 9 fixtures.
 These are user-reported desktop integration results, distinct from hosted CI.
-Core-table creation and history loading below are the next unexecuted milestone.
+Core execution was subsequently verified as recorded above.
 
 ## Earlier foundation check record
 

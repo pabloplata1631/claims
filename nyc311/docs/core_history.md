@@ -1,6 +1,7 @@
 # Current records and observed versions
 
-Implementation prepared; execution against the user's SQL Server is pending.
+The user executed scripts 030 through 033 on SQL Server and verified the initial
+load, safe rerun, and all seven controlled scenarios. See validation.md.
 Apply 030_core_tables.sql then 031_core_load.sql before 032_validate_core.sql.
 The last script loads batch 1 and verifies a repeat call makes no additional rows.
 
@@ -43,7 +44,7 @@ Given the user's validated sample, expect 100 current sample requests, 100 initi
 versions, 100 new requests, zero changes, and zero rejects. Repeating batch 1 must
 leave 100 current rows and 100 versions. Request 70592679 must remain a valid request
 with an ineligible NULL duration. Changed/unchanged/new-batch integration scenarios
-are tested by 033_test_core_history.sql, which is prepared but not yet executed.
+were tested successfully by the user through 033_test_core_history.sql.
 It covers new, repeated, unchanged, changed, invalid, namespace separation, and
 retention invariants. It rolls back its data but can advance identity counters.
 Older-batch rejection, concurrent sessions, and failure recovery require further

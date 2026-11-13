@@ -27,10 +27,13 @@ on 100 desktop sample records, then verified the enhanced view and passed all ni
 staging fixture cases in SSMS. See docs/validation.md for the reported results.
 
 Core current/version storage, a transactional loader, and seven scenario checks
-are now prepared in SQL scripts 030 through 033. Desktop SQL execution is pending.
+were verified by the user through SQL scripts 030 through 033, including the safe
+repeat load and all seven controlled history scenarios. Reporting views 040-041
+are now prepared for the next desktop validation. See docs/analytics_contract.md.
 
 Still planned: daily snapshots and scheduling, Power BI report, workspace promotion,
-app, and agent. Core history implementation still requires database verification.
+app, and agent. Core concurrency, older-batch rejection and failure recovery still
+require further integration verification beyond the passing scenarios.
 Confirmed user environment: SQL Server 2019, compatibility 150, Windows
 authentication, and NYC_Operations_Dev with audit.load_batch and raw.request_payload
 created through SSMS. The user loaded and reconciled 100 sample rows in batch 1.
