@@ -23,11 +23,14 @@ Windows extraction uses the OS certificate store through truststore.
 
 Initial typed staging SQL and an enhancement separating request and duration
 eligibility are now versioned under sql/. The user verified the original view
-on 100 desktop sample records; the enhanced view and fixture tests still require
-execution in SSMS. See docs/staging_quality.md and docs/data_quality_case_001.md.
+on 100 desktop sample records, then verified the enhanced view and passed all nine
+staging fixture cases in SSMS. See docs/validation.md for the reported results.
 
-Designed, not implemented or deployed: core history
-tables, daily scheduling, Power BI report, workspace promotion, app, and agent.
+Core current/version storage, a transactional loader, and seven scenario checks
+are now prepared in SQL scripts 030 through 033. Desktop SQL execution is pending.
+
+Still planned: daily snapshots and scheduling, Power BI report, workspace promotion,
+app, and agent. Core history implementation still requires database verification.
 Confirmed user environment: SQL Server 2019, compatibility 150, Windows
 authentication, and NYC_Operations_Dev with audit.load_batch and raw.request_payload
 created through SSMS. The user loaded and reconciled 100 sample rows in batch 1.

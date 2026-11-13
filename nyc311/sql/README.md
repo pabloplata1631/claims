@@ -8,14 +8,17 @@ Run in SSMS on SQL Server 2019, compatibility 150:
 4. 020_staging.sql creates or updates the typed staging view.
 5. 025_validate_staging.sql reads counts, eligibility, and the known negative-duration case.
 6. 026_test_staging_rules.sql tests nine cases with rolled-back DEV fixture inserts.
+7. 030_core_tables.sql creates current/version pointers and the core load audit.
+8. 031_core_load.sql creates the transactional core loader and current view.
+9. 032_validate_core.sql processes batch 1, checks results, and verifies a safe rerun.
+10. 033_test_core_history.sql tests seven transactional history scenarios and rolls back fixtures.
 
 The user executed initial equivalents in SSMS and verified 100 sample records.
 Existing database and tables are preserved by guards, not migrated. Rerun only
 the view script when its definition changes. All scripts explicitly target DEV.
-Core history and analytics implementation follow later. Legacy claims tables
+Core scripts are prepared but still require desktop execution. Analytics follows later. Legacy claims tables
 remain separate. UAT and PROD will be separate databases.
 
-The updated view retains the original validation_status and adds independent
-request and duration eligibility. It must be applied in SSMS before running the
-new checks. Desktop integration execution is pending; code publication is not
-evidence that SQL Server has received a new view definition.
+The user has applied and verified the updated staging view and passed all nine
+staging fixture cases. See docs/validation.md for results. Publishing subsequent
+core code does not establish that it has been executed against SQL Server.
