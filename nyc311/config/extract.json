@@ -1,0 +1,7 @@
+{
+  "dataset_id": "erm2-nwe9",
+  "borough": "BROOKLYN",
+  "page_size": 5000,
+  "timeout_seconds": 60,
+  "retry_attempts": 4
+}
