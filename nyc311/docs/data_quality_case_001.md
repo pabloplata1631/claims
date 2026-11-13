@@ -28,5 +28,7 @@ the duration with zero or delete the raw record.
 ## Implementation tracking
 
 Initial SQL scripts reproduce the objects executed by the user in SSMS.
-Separate request and duration validity flags are the next change. The assistant
+The updated staging view adds separate request and duration validity flags.
+The user must apply the new definition and run its validation before deployment
+can be marked verified. Negative durations become NULL without changing raw data. The assistant
 cannot execute SQL directly against the user's desktop database.

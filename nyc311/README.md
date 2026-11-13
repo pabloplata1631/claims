@@ -21,11 +21,17 @@ Also implemented: a DEV-only raw loader with explicit sample opt-in, manifest an
 checksum checks, a transaction for batch plus raw rows, and duplicate-run rejection.
 Windows extraction uses the OS certificate store through truststore.
 
-Designed, not implemented or deployed: SQL transformation, history
+Initial typed staging SQL and an enhancement separating request and duration
+eligibility are now versioned under sql/. The user verified the original view
+on 100 desktop sample records; the enhanced view and fixture tests still require
+execution in SSMS. See docs/staging_quality.md and docs/data_quality_case_001.md.
+
+Designed, not implemented or deployed: core history
 tables, daily scheduling, Power BI report, workspace promotion, app, and agent.
 Confirmed user environment: SQL Server 2019, compatibility 150, Windows
 authentication, and NYC_Operations_Dev with audit.load_batch and raw.request_payload
-created through SSMS. Local Python connectivity succeeded. This development
+created through SSMS. The user loaded and reconciled 100 sample rows in batch 1.
+Local Python connectivity succeeded. This development
 environment does not have direct access to that desktop database.
 
 ## Source and scope
